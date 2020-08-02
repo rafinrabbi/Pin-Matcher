@@ -57,10 +57,11 @@
 
     <script>
         // generate pin
-        document.getElementById("unmatch").style.display="none";
-        document.getElementById("match").style.display="none";
+
         const generatePinClick= document.getElementById("generate-pin-click");
         generatePinClick.addEventListener("click", function(){
+            document.getElementById("unmatch").style.display="none";
+            document.getElementById("match").style.display="none";
             document.getElementById("pin-box").value=
             Math.floor(1000 + Math.random() * 9000);
         })
@@ -110,6 +111,8 @@
                 document.getElementById("try-left").innerText= counntt;
             }
             document.getElementById("display-input").value="";
+            // document.getElementById("match").style.display="none";
+            // document.getElementById("unmatch").style.display="none";
         })
 
     </script>
